@@ -8,7 +8,6 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using FlashlightColors.Resources;
-using System.Windows.Shapes;
 using System.Windows.Media;
 
 namespace FlashlightColors
@@ -24,24 +23,31 @@ namespace FlashlightColors
             //BuildLocalizedApplicationBar();
         }
 
-        private void BlueButton_Click(object sender, RoutedEventArgs e)
+        private void ColorButton_Click(object sender, RoutedEventArgs e)
         {
-            Flashlight.Fill = new SolidColorBrush(Colors.Blue);
-        }
+            var color = Colors.White;
+            var button = (Button)sender;
 
-        private void OrangeButton_Click(object sender, RoutedEventArgs e)
-        {
-            Flashlight.Fill = new SolidColorBrush(Colors.Orange);
-        }
+            switch (button.Name)
+            {
+                case "WhiteButton":
+                    color = Colors.White;
+                    break;
 
-        private void RedButton_Click (object sender, RoutedEventArgs e)
-        {
-            Flashlight.Fill = new SolidColorBrush(Colors.Red);
-        }
+                case "BlueButton":
+                    color = Colors.Blue;
+                    break;
 
-        private void WhiteButton_Click(object sender, RoutedEventArgs e)
-        {
-            Flashlight.Fill = new SolidColorBrush(Colors.White);
+                case "RedButton":
+                    color = Colors.Red;
+                    break;
+
+                case "OrangeButton":
+                    color = Colors.Orange;
+                    break;
+            }
+
+            Flashlight.Fill = new SolidColorBrush(color);
         }
 
         // Sample code for building a localized ApplicationBar

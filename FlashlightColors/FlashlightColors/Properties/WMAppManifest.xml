@@ -2,7 +2,7 @@
 
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US"/>
-  <App xmlns="" ProductID="{63db59cc-a4c3-4b8a-8993-426d5ef6d2ef}" Title="FlashlightColors" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="FlashlightColors author" Description="Sample description" Publisher="FlashlightColors" PublisherID="{4406ff25-fa9a-482e-a568-848d718c0919}">
+  <App xmlns="" ProductID="{dc645838-cb81-4a87-9163-d1eab46cbf4c}" Title="FlashlightColors" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="FlashlightColors author" Description="Sample description" Publisher="FlashlightColors" PublisherID="{9a0b8a86-1f34-433e-82bd-b78200900904}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING"/>
