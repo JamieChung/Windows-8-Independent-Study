@@ -1,0 +1,198 @@
+
+<html>
+  <head>
+        <link href="https://a248.e.akamai.net/assets.github.com/assets/github-407693f9f73c33bc72d72bf9656fbf5ae05597d3.css" media="screen" rel="stylesheet" type="text/css" />    <link href="https://a248.e.akamai.net/assets.github.com/assets/github2-56ff2781ae95d3a31c723b6774df51dd407ef091.css" media="screen" rel="stylesheet" type="text/css" />
+    <style>
+      body { padding: 30px 0; }
+      #readme { width: 914px; margin: 0 auto; }
+    </style>
+  </head>
+  <body>
+    <div id="readme">
+      <article class="markdown-body">
+        <h1>Flashlight</h1>
+
+<h3>Flashlight app will provide a blank white screen allowing the phone to serve as a beacon of light in a dark area.</h3>
+
+<p><strong>Requirements</strong></p>
+
+<ul>
+<li>Visual Studio 2012</li>
+<li>Windows Phone 8 SDK</li>
+<li>Windows 8</li>
+</ul><hr><p>After launching <code>Visual Studio 2012</code>, you will be presented with the <code>Start Page</code>. It will give you an overview of the projects you have recently been working, links to developer resources as well as developer news from the Windows Development teams.</p>
+
+<p><a href="images/main-screen.png" target="_blank"><img src="images/main-screen.png" alt="Main Screen" style="max-width:100%;"></a></p>
+
+<hr><p>To create a new project you can either select <code>New Project</code> from the <code>Start Page</code> or navigate the file menu by selecting <code>File -&gt; New -&gt; Project</code>.</p>
+
+<p><a href="images/file-new-new-project.png" target="_blank"><img src="images/file-new-new-project.png" alt="Menu instructions to create new project" style="max-width:100%;"></a></p>
+
+<hr><p>In the <code>New Project</code> dialog window, select <code>Templates -&gt; Visual C# -&gt; Windows Phone</code> on the left column and <code>Windows Phone App</code> in the resulting right column. The name of the app will be <code>Flashlight</code> and ensure that <code>Create directory for solution</code> is checked.</p>
+
+<p><a href="images/new-project-dialog.png" target="_blank"><img src="images/new-project-dialog.png" alt="New Project Dialog" style="max-width:100%;"></a></p>
+
+<hr><p>After selecting OK, Visual Studio (VS) will ask you which Windows Phone OS is the target version for this project. In the dropdown menu, leave the default value of <code>Windows Phone OS 8.0</code> and proceed while VS creates your first project.</p>
+
+<p><a href="images/new-windows-phone-application.png" target="_blank"><img src="images/new-windows-phone-application.png" alt="New Windows Phone Application" style="max-width:100%;"></a></p>
+
+<hr><p>You will now see two column panels. The left is the Designer which is a GUI interface that VS allows you to place objets onto the UI. The right side is the code editor which provides a XAML file, a XML-like formatted document which represents the UI. Changes to one panel will affect both panels and VS will automatically refresh the panels with the updated changes.</p>
+
+<p><a href="images/new-app-main-panels.png" target="_blank"><img src="images/new-app-main-panels.png" alt="Main Panel" style="max-width:100%;"></a></p>
+
+<hr><h2>MainPage.xaml</h2>
+
+<p>Let's look at the current source code for the default xaml page that VS generates.</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;phone:PhoneApplicationPage</span>
+    <span class="na">x:Class=</span><span class="s">"Flashlight.MainPage"</span>
+    <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span>
+    <span class="na">xmlns:x=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml"</span>
+    <span class="na">xmlns:phone=</span><span class="s">"clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"</span>
+    <span class="na">xmlns:shell=</span><span class="s">"clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"</span>
+    <span class="na">xmlns:d=</span><span class="s">"http://schemas.microsoft.com/expression/blend/2008"</span>
+    <span class="na">xmlns:mc=</span><span class="s">"http://schemas.openxmlformats.org/markup-compatibility/2006"</span>
+    <span class="na">mc:Ignorable=</span><span class="s">"d"</span>
+    <span class="na">FontFamily=</span><span class="s">"{StaticResource PhoneFontFamilyNormal}"</span>
+    <span class="na">FontSize=</span><span class="s">"{StaticResource PhoneFontSizeNormal}"</span>
+    <span class="na">Foreground=</span><span class="s">"{StaticResource PhoneForegroundBrush}"</span>
+    <span class="na">SupportedOrientations=</span><span class="s">"Portrait"</span> <span class="na">Orientation=</span><span class="s">"Portrait"</span>
+    <span class="na">shell:SystemTray.IsVisible=</span><span class="s">"True"</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!--LayoutRoot is the root grid where all page content is placed--&gt;</span>
+    <span class="nt">&lt;Grid</span> <span class="na">x:Name=</span><span class="s">"LayoutRoot"</span> <span class="na">Background=</span><span class="s">"Transparent"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Grid.RowDefinitions&gt;</span>
+            <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">"Auto"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">"*"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Grid.RowDefinitions&gt;</span>
+
+        <span class="c">&lt;!-- LOCALIZATION NOTE:</span>
+<span class="c">            To localize the displayed strings copy their values to appropriately named</span>
+<span class="c">            keys in the app's neutral language resource file (AppResources.resx) then</span>
+<span class="c">            replace the hard-coded text value between the attributes' quotation marks</span>
+<span class="c">            with the binding clause whose path points to that string name.</span>
+
+<span class="c">            For example:</span>
+
+<span class="c">                Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"</span>
+
+<span class="c">            This binding points to the template's string resource named "ApplicationTitle".</span>
+
+<span class="c">            Adding supported languages in the Project Properties tab will create a</span>
+<span class="c">            new resx file per language that can carry the translated values of your</span>
+<span class="c">            UI strings. The binding in these examples will cause the value of the</span>
+<span class="c">            attributes to be drawn from the .resx file that matches the</span>
+<span class="c">            CurrentUICulture of the app at run time.</span>
+<span class="c">         --&gt;</span>
+
+        <span class="c">&lt;!--TitlePanel contains the name of the application and page title--&gt;</span>
+        <span class="nt">&lt;StackPanel</span> <span class="na">x:Name=</span><span class="s">"TitlePanel"</span> <span class="na">Grid.Row=</span><span class="s">"0"</span> <span class="na">Margin=</span><span class="s">"12,17,0,28"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;TextBlock</span> <span class="na">Text=</span><span class="s">"MY APPLICATION"</span> <span class="na">Style=</span><span class="s">"{StaticResource PhoneTextNormalStyle}"</span> <span class="na">Margin=</span><span class="s">"12,0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;TextBlock</span> <span class="na">Text=</span><span class="s">"page name"</span> <span class="na">Margin=</span><span class="s">"9,-7,0,0"</span> <span class="na">Style=</span><span class="s">"{StaticResource PhoneTextTitle1Style}"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/StackPanel&gt;</span>
+
+        <span class="c">&lt;!--ContentPanel - place additional content here--&gt;</span>
+        <span class="nt">&lt;Grid</span> <span class="na">x:Name=</span><span class="s">"ContentPanel"</span> <span class="na">Grid.Row=</span><span class="s">"1"</span> <span class="na">Margin=</span><span class="s">"12,0,12,0"</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;/Grid&gt;</span>
+
+        <span class="c">&lt;!--Uncomment to see an alignment grid to help ensure your controls are</span>
+<span class="c">            aligned on common boundaries.  The image has a top margin of -32px to</span>
+<span class="c">            account for the System Tray. Set this to 0 (or remove the margin altogether)</span>
+<span class="c">            if the System Tray is hidden.</span>
+
+<span class="c">            Before shipping remove this XAML and the image itself.--&gt;</span>
+        <span class="c">&lt;!--&lt;Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" /&gt;--&gt;</span>
+    <span class="nt">&lt;/Grid&gt;</span>
+
+<span class="nt">&lt;/phone:PhoneApplicationPage&gt;</span>
+</pre>
+</div>
+
+
+<hr><h2>Breakdown of XAML Elements</h2>
+
+<p>There are two main child elements in the  element. </p>
+
+<p><code>StackPanel</code> is the top half of the application as soon in the Designer preview. There are two text block elements which associate with the default text.</p>
+
+<p><code>Grid</code> is the secondary grid element which serves as the main content area. This is where you would place additional elements or control elements. Is is nested in another Grid element named LayoutRoot and provides a secondary grouping of elements.</p>
+
+<div class="highlight">
+<pre>        <span class="c">&lt;!--TitlePanel contains the name of the application and page title--&gt;</span>
+        <span class="nt">&lt;StackPanel</span> <span class="na">x:Name=</span><span class="s">"TitlePanel"</span> <span class="na">Grid.Row=</span><span class="s">"0"</span> <span class="na">Margin=</span><span class="s">"12,17,0,28"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;TextBlock</span> <span class="na">Text=</span><span class="s">"MY APPLICATION"</span> <span class="na">Style=</span><span class="s">"{StaticResource PhoneTextNormalStyle}"</span> <span class="na">Margin=</span><span class="s">"12,0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;TextBlock</span> <span class="na">Text=</span><span class="s">"page name"</span> <span class="na">Margin=</span><span class="s">"9,-7,0,0"</span> <span class="na">Style=</span><span class="s">"{StaticResource PhoneTextTitle1Style}"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/StackPanel&gt;</span>
+
+        <span class="c">&lt;!--ContentPanel - place additional content here--&gt;</span>
+        <span class="nt">&lt;Grid</span> <span class="na">x:Name=</span><span class="s">"ContentPanel"</span> <span class="na">Grid.Row=</span><span class="s">"1"</span> <span class="na">Margin=</span><span class="s">"12,0,12,0"</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;/Grid&gt;</span>
+</pre>
+</div>
+
+
+<p>We are going to remove both of these elements and see the updated change in the Designer view. You will notice that all the text has been removed and it is previewing a black background.</p>
+
+<hr><h2>MainPage.xaml</h2>
+
+<p>Now we will look at the remaining <code>Grid</code> element tag. It as an attribute reading <code>Background="Transparent"</code> and we will simply change that to <code>Background="White"</code>. You will notice that the preview background is now previewing that the color has changed to white.</p>
+
+<pre><code>    &lt;!--LayoutRoot is the root grid where all page content is placed--&gt;
+    &lt;Grid x:Name="LayoutRoot" Background="White"&gt;
+        &lt;Grid.RowDefinitions&gt;
+            &lt;RowDefinition Height="Auto"/&gt;
+            &lt;RowDefinition Height="*"/&gt;
+        &lt;/Grid.RowDefinitions&gt;
+    &lt;/Grid&gt;
+</code></pre>
+
+<hr><p>The final source code for this UI page. Now we can build and run in the Windows Phone Simulator.</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;phone:PhoneApplicationPage</span>
+    <span class="na">x:Class=</span><span class="s">"Flashlight.MainPage"</span>
+    <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span>
+    <span class="na">xmlns:x=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml"</span>
+    <span class="na">xmlns:phone=</span><span class="s">"clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"</span>
+    <span class="na">xmlns:shell=</span><span class="s">"clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"</span>
+    <span class="na">xmlns:d=</span><span class="s">"http://schemas.microsoft.com/expression/blend/2008"</span>
+    <span class="na">xmlns:mc=</span><span class="s">"http://schemas.openxmlformats.org/markup-compatibility/2006"</span>
+    <span class="na">mc:Ignorable=</span><span class="s">"d"</span>
+    <span class="na">FontFamily=</span><span class="s">"{StaticResource PhoneFontFamilyNormal}"</span>
+    <span class="na">FontSize=</span><span class="s">"{StaticResource PhoneFontSizeNormal}"</span>
+    <span class="na">Foreground=</span><span class="s">"{StaticResource PhoneForegroundBrush}"</span>
+    <span class="na">SupportedOrientations=</span><span class="s">"Portrait"</span> <span class="na">Orientation=</span><span class="s">"Portrait"</span>
+    <span class="na">shell:SystemTray.IsVisible=</span><span class="s">"True"</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!--LayoutRoot is the root grid where all page content is placed--&gt;</span>
+    <span class="nt">&lt;Grid</span> <span class="na">x:Name=</span><span class="s">"LayoutRoot"</span> <span class="na">Background=</span><span class="s">"White"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Grid.RowDefinitions&gt;</span>
+            <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">"Auto"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">"*"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Grid.RowDefinitions&gt;</span>
+    <span class="nt">&lt;/Grid&gt;</span>
+<span class="nt">&lt;/phone:PhoneApplicationPage&gt;</span>
+</pre>
+</div>
+
+
+<h2>Build &amp; Deploy</h2>
+
+<p>In order to deploy the app within the Windows Phone Simulator, you can use the menu <code>Debug -&gt; Start Debugging (F5)</code> or by selecting the green play arrow button on the toolbar shown below. The default settings for the simulator is sufficient for testing our app and is listed as <code>Emulator WVGA 512MB</code>.</p>
+
+<p><a href="images/select-emulator-debug.png" target="_blank"><img src="images/select-emulator-debug.png" alt="Select Emulator Debug" style="max-width:100%;"></a></p>
+
+<p>Now wait while VS builds and then installs the app on the Windows Phone Simulator.</p>
+
+<hr><h2>Simulator</h2>
+
+<p>Here is a screenshot of the deployed version of the application. You should see a white screen. Congratulations! You have now built your first app for the Windows Phone 8 platform.</p>
+
+<p><a href="images/emulator-flashlight.png" target="_blank"><img src="images/emulator-flashlight.png" alt="Flashlight App Emulator" style="max-width:100%;"></a></p>
+      </article>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+<html>
+  <head>
+       
+    <link href="https://a248.e.akamai.net/assets.github.com/assets/github-43b1cfcfbe53a62c7ab76e1da7f0ff83b28c9c92.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://a248.e.akamai.net/assets.github.com/assets/github2-4ad6d430731cce299b9ec5d04f082fad87ef19fa.css" media="screen" rel="stylesheet" type="text/css" />
+    <style>
+      body { padding: 30px 0; }
+      #readme { width: 914px; margin: 0 auto; }
+    </style>
+  </head>
+  <body>
+    <div id="readme">
+      <article class="markdown-body">
+        <h1>FlashlightColors</h1>
+
+<h3>FlashlightColors app will provide the user options to change the flashlight color on the screen based on predefined colors.</h3>
+
+<p><strong>Requirements</strong></p>
+
+<ul>
+<li>Visual Studio 2012</li>
+<li>Windows Phone 8 SDK</li>
+<li>Windows 8</li>
+<li>Flashlight Tutorial</li>
+</ul><hr><p>Create a new Windows Phone 8 Project and set the name as <code>FlashlightColors</code>.****</p>
+
+<p>Ensure that <code>Create directory for solution</code> is checked.</p>
+
+<p>Leave the default value of <code>Windows Phone OS 8.0</code>.</p>
+
+<hr><h2>Removing Unnecessary Elements</h2>
+
+<p>Remove the <code>&lt;StackPanel&gt;</code> element and all its children <code>&lt;TextBLock&gt;</code> elements.</p>
+
+<hr><h2>Setup your project panes</h2>
+
+<p>After saving the project, the designer will be updated with what seems to be a blank screen. Now we will open up the <code>Toolbox</code> menu by selecting the <code>View</code> menu and then selecting <code>Toolbox</code> as shown below:</p>
+
+<p><a href="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/activate-toolbox.PNG" target="_blank"><img src="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/activate-toolbox.PNG" alt="Activate Toolbox" style="max-width:100%;"></a></p>
+
+<p>The <code>Toolbox</code> will appear and you can drag it to an area of the screen which is most convinient for you. I prefer to the left of the <code>Designer</code> view.</p>
+
+<p><a href="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/toolbox-view.PNG" target="_blank"><img src="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/toolbox-view.PNG" alt="Toolbox View" style="max-width:100%;"></a></p>
+
+<p>Likewise, do the same for <code>View</code> and then selecting <code>Properties</code> to display the <code>Properties</code> pane.</p>
+
+<hr><h2>Set the UI Stage</h2>
+
+<p>In the <code>Toolbox</code> tab, expand the <code>Common Windows Phone Controls</code> tree.</p>
+
+<p>Drag a <code>Grid</code>element onto the Designer canvas.</p>
+
+<p><a href="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/grid-placement.PNG" target="_blank"><img src="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/grid-placement.PNG" alt="Grid Element on Canvas" style="max-width:100%;"></a></p>
+
+<p>Reposition the <code>Grid</code> element on the canvas in the upper area. It will be about 100px in height which will be identified by the rulers and auto guides. The edges of the <code>Grid</code> element will snap to the canvas edges and the bottom edge of the rectangle grid will snap with the existing <code>&lt;ContentPanel&gt;</code> Grid element.</p>
+
+<p><a href="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/grid-alignment.PNG" target="_blank"><img src="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/grid-alignment.PNG" alt="Grid Element Aligned" style="max-width:100%;"></a></p>
+
+<p>In the <code>Properties</code> panel, name this upper grid <code>ButtonPanel</code>.</p>
+
+<hr><p>Now drag four separate <code>Button</code> controls onto the newly created <code>ButtonPanel</code> grid and position them left to right (horizontally).</p>
+
+<p>When positoning the buttons, they will automatically try to snap in place and their outer margin will be auto calculated based on the grid that they are placed on. Their heights will be automatically determined so that does not need to be adjusted. </p>
+
+<p><a href="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/four-button-alignment.PNG" target="_blank"><img src="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/four-button-alignment.PNG" alt="Four Button Alignment" style="max-width:100%;"></a></p>
+
+<hr><h2>Button Attributes</h2>
+
+<p>Click a button on the Designer View and in the <code>Properties</code> pane, enter the value <code>Blue</code> for the <code>Content</code> attribute and <code>BlueButton</code> for the <code>Name</code> attribute.</p>
+
+<p><a href="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/blue-button.PNG" target="_blank"><img src="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/blue-button.PNG" alt="Blue Button Properties" style="max-width:100%;"></a></p>
+
+<p>For the remaining three buttons, do the same simiarily for <code>Orange</code>, <code>Red</code>, <code>White</code>.</p>
+
+<p>When renaming the button <code>Content</code> attributes, the widths of the buttons will auto adjust. You can easily snap them back so thaty they are evenly spaced apart.</p>
+
+<p><a href="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/orange-button-placement.PNG" target="_blank"><img src="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/orange-button-placement.PNG" alt="Orange Button Placement" style="max-width:100%;"></a></p>
+
+<hr><h2>Final Button Placements</h2>
+
+<p>Here is a preview of what your buttons can look like once they are aligned.</p>
+
+<p><a href="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/four-button-alignment.PNG" target="_blank"><img src="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/four-button-alignment.PNG" alt="Four Buttons Alignemnt" style="max-width:100%;"></a></p>
+
+<p>Here is a sample of what your MainPage.xaml would look like:</p>
+
+<div class="highlight">
+<pre>        <span class="nt">&lt;Grid</span> <span class="na">x:Name=</span><span class="s">"ButtonPanel"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Height=</span><span class="s">"103"</span> <span class="na">Grid.RowSpan=</span><span class="s">"2"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span> <span class="na">Width=</span><span class="s">"480"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">x:Name=</span><span class="s">"BlueButton"</span> <span class="na">Content=</span><span class="s">"Blue"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Margin=</span><span class="s">"10,10,0,0"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">x:Name=</span><span class="s">"OrangeButton"</span> <span class="na">Content=</span><span class="s">"Orange"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Margin=</span><span class="s">"110,10,0,0"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">x:Name=</span><span class="s">"RedButton"</span> <span class="na">Content=</span><span class="s">"Red"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Margin=</span><span class="s">"242,10,0,0"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">x:Name=</span><span class="s">"WhiteButton"</span> <span class="na">Content=</span><span class="s">"White"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Margin=</span><span class="s">"337,10,0,0"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Grid&gt;</span>
+</pre>
+</div>
+
+
+<h2>Flashlight Area</h2>
+
+<p>The lower grid area is called <code>ContentPanel</code>. Within this region, we will place the canvas which will serve as the Flashlight "light source".</p>
+
+<p>Drag a new <code>Rectangle</code> element from the <code>Common Windows Phone Elements</code> group and place it on the lower Grid area. Maximize the size of the Rectangle grid so that it takes the entire size of the grid it is placed in and also name the rectangle shape <code>Flashlight</code> in the properties pane.</p>
+
+<p>Your <code>ContentPanel</code> grid xml will look similar to the following:</p>
+
+<div class="highlight">
+<pre>        <span class="nt">&lt;Grid</span> <span class="na">x:Name=</span><span class="s">"ContentPanel"</span> <span class="na">Grid.Row=</span><span class="s">"1"</span> <span class="na">Margin=</span><span class="s">"0,103,0,5"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Rectangle</span> <span class="na">x:Name=</span><span class="s">"Flashlight"</span> <span class="na">Fill=</span><span class="s">"#FFF4F4F5"</span> <span class="na">Height=</span><span class="s">"670"</span> <span class="na">Stroke=</span><span class="s">"Black"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span> <span class="na">Margin=</span><span class="s">"0,0,0,-10"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Grid&gt;</span>
+</pre>
+</div>
+
+
+<p>Your designer preview will look similar to this:</p>
+
+<p><a href="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/default-rectangle.PNG" target="_blank"><img src="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/default-rectangle.PNG" alt="Default Rectangle Flashlight" style="max-width:100%;"></a></p>
+
+<h2>Button Events</h2>
+
+<p>In Windows Phone, common elements such as Buttons can respond to user created events. In this case, we want to capture the event of the user clicking on each of the buttons. What result do we want to accomplish when the user clicks the button? We want the Rectangle to change to the appropriate color.</p>
+
+<p>The default event behavior for buttons are calld <code>click events</code>. To create this behavior, double click the <code>Blue</code> button on the Designer UI. It will bring up to the <code>MainPage.xaml.cs</code> and auto generate this function:</p>
+
+<div class="highlight">
+<pre>        <span class="k">private</span> <span class="k">void</span> <span class="nf">BlueButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+
+        <span class="p">}</span>
+</pre>
+</div>
+
+
+<p>The <code>MainPage.xaml.cs</code> file is grouped <code>MainPage.xaml</code> and is an extension of the XML document that generates the UI. </p>
+
+<p>You can find this file within the <code>Solution Explorer</code> pane on the right hand side of the screen inside the <code>MainPage.xaml</code> file tree.</p>
+
+<p><a href="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/solution-mainpage-xaml-cs.PNG" target="_blank"><img src="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/solution-mainpage-xaml-cs.PNG" alt="Solution MainPage.xaml.cs" style="max-width:100%;"></a></p>
+
+<hr><p>Return back to the <code>MainPage.xaml</code> file by doulble clicking it in the <code>Solution Explorer</code> pane. Perform the same double click on each of the buttons to have the rest of the click events generated.</p>
+
+<p>You will notice that your <code>MainPage.xaml</code> file would have updated the four <code>&lt;Button&gt;</code> elements with a new attribute: <code>Click="BlueButton_Click"</code>. This tells the Button element to invoke the <code>BlueButton_Click</code> inside the associated C# file which is <code>MainPage.xaml.cs</code>.</p>
+
+<div class="highlight">
+<pre>        <span class="nt">&lt;Grid</span> <span class="na">x:Name=</span><span class="s">"ButtonPanel"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Height=</span><span class="s">"103"</span> <span class="na">Grid.RowSpan=</span><span class="s">"2"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span> <span class="na">Width=</span><span class="s">"480"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">x:Name=</span><span class="s">"BlueButton"</span> <span class="na">Content=</span><span class="s">"Blue"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Margin=</span><span class="s">"10,10,0,0"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span> <span class="na">Click=</span><span class="s">"BlueButton_Click"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">x:Name=</span><span class="s">"OrangeButton"</span> <span class="na">Content=</span><span class="s">"Orange"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Margin=</span><span class="s">"110,10,0,0"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span> <span class="na">Click=</span><span class="s">"OrangeButton_Click"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">x:Name=</span><span class="s">"RedButton"</span> <span class="na">Content=</span><span class="s">"Red"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Margin=</span><span class="s">"242,10,0,0"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span> <span class="na">Click=</span><span class="s">"RedButton_Click"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">x:Name=</span><span class="s">"WhiteButton"</span> <span class="na">Content=</span><span class="s">"White"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Margin=</span><span class="s">"337,10,0,0"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span> <span class="na">Click=</span><span class="s">"WhiteButton_Click"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Grid&gt;</span>
+</pre>
+</div>
+
+
+<p>You should also have four methods generated within your C# file.</p>
+
+<div class="highlight">
+<pre>        <span class="k">private</span> <span class="k">void</span> <span class="nf">BlueButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+
+        <span class="p">}</span>
+
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">OrangeButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+
+        <span class="p">}</span>
+
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">RedButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+
+        <span class="p">}</span>
+
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">WhiteButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+
+        <span class="p">}</span>
+</pre>
+</div>
+
+
+<h2>Programming the Events</h2>
+
+<p>Now we have the events wired up with the associated buttons on the page. The next step is to execute code that will change the background fill of the rectangle we have on the main UI.</p>
+
+<p>To do so we need to discover how to fill the Rectangle shape. Go to the MainPage.xaml file and hover your mouse over the <code>&lt;Rectangle&gt;</code> element. You will see that it points to the <code>System.Windows.Shapes.Rectangle</code> class. This is an easy way to figure out what namespace a certain class is contained in so that you can find the correct documentation online to utilizie the class.</p>
+
+<p>The documentation for the class can be found at <a href="http://msdn.microsoft.com/en-us/library/vstudio/ms615650.aspx">Rectangle Class</a>. After a click glance, you can find the <code>Fill</code> property which is what we are interested in: <a href="http://msdn.microsoft.com/en-us/library/vstudio/system.windows.shapes.shape.fill.aspx">Shape.Fill Property</a>.</p>
+
+<p>Scrolling through the class documentation, you will notice at the bottom a section called <code>More Code</code> and provides some quick examples how to accomplish common tasks using this class. The one we are interested in i called <a href="http://msdn.microsoft.com/en-us/library/vstudio/ms747103.aspx">How to: Paint an Area with a Solid Color</a> and the excerpt is found here:</p>
+
+<blockquote>
+<p>To paint an area with a solid color, you can use a predefined system brush, such as <a href="http://msdn.microsoft.com/en-us/library/vstudio/system.windows.media.brushes.red.aspx">Red</a> or <a href="http://msdn.microsoft.com/en-us/library/vstudio/system.windows.media.brushes.blue.aspx">Blue</a>, or you can create a new <a href="http://msdn.microsoft.com/en-us/library/vstudio/system.windows.media.solidcolorbrush.aspx">SolidBrushColor</a> and describe its <a href="http://msdn.microsoft.com/en-us/library/vstudio/system.windows.media.solidcolorbrush.color.aspx">Color</a> using alpha, red, green, and blue values. In XAML, you may also paint an area with a solid color by using hexidecimal notation.</p>
+</blockquote>
+
+<p><strong>MSDN</strong>, <em>Microsoft Developer Network</em> provides a lot of resources, examples, and all the class documentation for the Windows Phone 8 and Windows 8 SDKs.</p>
+
+<hr><p>After reading through the documentation you will notice that you can simply create a new <code>SolidBrushColor</code> object and pass a predefinied <code>Colors</code> object as the constructor. This newly created object can be applied to the <code>Fill</code> property of our <code>Flashlight</code> Rectangle in our project.</p>
+
+<p>Add the following to thew <code>BlueButton_Click</code> method.</p>
+
+<div class="highlight">
+<pre>            <span class="n">Flashlight</span><span class="p">.</span><span class="n">Fill</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SolidColorBrush</span><span class="p">(</span><span class="n">Colors</span><span class="p">.</span><span class="n">Blue</span><span class="p">)</span>
+</pre>
+</div>
+
+
+<p>You will notice that <code>SolidColorBrush</code> as well as the <code>Colors</code> text has a red squiggly line underneath. This is Visual Studio's way of telling you that it is unable to find, or resolve those names. What we need to do is tell our <code>MainPage.xaml.cs</code> file to use resources from other packages in order to resolve those names.</p>
+
+<p><a href="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/solid-color-brush-not-resolved.PNG" target="_blank"><img src="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/solid-color-brush-not-resolved.PNG" alt="Solid Color Brush Not Resolved" style="max-width:100%;"></a></p>
+
+<p>Right click <code>SolidColorBrush</code>, in the flyout menu, select <code>Resolve</code> -&gt; <code>using System.Windows.Media;</code>. </p>
+
+<p><a href="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/solid-color-brush-resolved.PNG" target="_blank"><img src="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/solid-color-brush-resolved.PNG" alt="Solid Color Brush Resolved" style="max-width:100%;"></a></p>
+
+<p>You will notice that the red squiggly line has disappeared under both names because the <code>Colors</code> object could also be resolved under the same namespace.</p>
+
+<hr><p>Now do the same for the other three events using the appropate color from the <code>Colors</code> class.</p>
+
+<div class="highlight">
+<pre>        <span class="k">private</span> <span class="k">void</span> <span class="nf">BlueButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Flashlight</span><span class="p">.</span><span class="n">Fill</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SolidColorBrush</span><span class="p">(</span><span class="n">Colors</span><span class="p">.</span><span class="n">Blue</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">OrangeButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Flashlight</span><span class="p">.</span><span class="n">Fill</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SolidColorBrush</span><span class="p">(</span><span class="n">Colors</span><span class="p">.</span><span class="n">Orange</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">RedButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Flashlight</span><span class="p">.</span><span class="n">Fill</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SolidColorBrush</span><span class="p">(</span><span class="n">Colors</span><span class="p">.</span><span class="n">Red</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">WhiteButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Flashlight</span><span class="p">.</span><span class="n">Fill</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SolidColorBrush</span><span class="p">(</span><span class="n">Colors</span><span class="p">.</span><span class="n">White</span><span class="p">);</span>
+        <span class="p">}</span>
+</pre>
+</div>
+
+
+<h2>Easily Build</h2>
+
+<p>Now at this point, we have completed our basic functionality for the Colored Flashlight app. Build and Deploy the application and try clicking the various buttons to see the colors changing on the flashlight canvas.</p>
+
+<h2>Refactoring Code</h2>
+
+<p>This part of the tutorial will go into how to refactor the code and coupling common events together.</p>
+
+<p>The thought process behind this is that we have four buttons that fires on a specific event and does a simple action, change the rectangle color. The only changing factor is the color. Our objective is to have one event that multiple objects can respond to.</p>
+
+<p>First what we will do is delete all the event methods except <code>BlueButton_Click</code> method. </p>
+
+<p>We will now rename our single event method to <code>ColorButton_Click</code>.</p>
+
+<p>Inspecting the method further we see two generic parameters: <code>object sender</code> and <code>RoutedEventArgs e</code>.</p>
+
+<p>The basic way to explain this generic event is that <code>sender</code> is the object that invoked the event. This is where we can get any related objects. <code>e</code> contains any other special arguments in more complex events. </p>
+
+<div class="highlight">
+<pre>            <span class="kt">var</span> <span class="n">color</span> <span class="p">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">White</span><span class="p">;</span>
+            <span class="kt">var</span> <span class="n">button</span> <span class="p">=</span> <span class="p">(</span><span class="n">Button</span><span class="p">)</span><span class="n">sender</span><span class="p">;</span>
+
+            <span class="n">Flashlight</span><span class="p">.</span><span class="n">Fill</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SolidColorBrush</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
+</pre>
+</div>
+
+
+<p>What I have done is create a default color, white and type casted the sender object to a Button type. How do I know it is a button type? Because I only will be sending button objects to this event so it is a safe assumption to make.</p>
+
+<hr><p>Now that the sender object has been casted to a <code>Button</code> type, we can access attributes derived from the xaml definition.</p>
+
+<div class="highlight">
+<pre>        <span class="k">private</span> <span class="k">void</span> <span class="nf">ColorButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">color</span> <span class="p">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">White</span><span class="p">;</span>
+            <span class="kt">var</span> <span class="n">button</span> <span class="p">=</span> <span class="p">(</span><span class="n">Button</span><span class="p">)</span><span class="n">sender</span><span class="p">;</span>
+
+            <span class="k">switch</span> <span class="p">(</span><span class="n">button</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">case</span> <span class="s">"WhiteButton"</span><span class="p">:</span>
+                    <span class="n">color</span> <span class="p">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">White</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+
+                <span class="k">case</span> <span class="s">"BlueButton"</span><span class="p">:</span>
+                    <span class="n">color</span> <span class="p">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">Blue</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+
+                <span class="k">case</span> <span class="s">"RedButton"</span><span class="p">:</span>
+                    <span class="n">color</span> <span class="p">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">Red</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+
+                <span class="k">case</span> <span class="s">"OrangeButton"</span><span class="p">:</span>
+                    <span class="n">color</span> <span class="p">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">Orange</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="n">Flashlight</span><span class="p">.</span><span class="n">Fill</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SolidColorBrush</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
+        <span class="p">}</span>
+</pre>
+</div>
+
+
+<hr><p>The next step is to update the UI with the proper click events. Go back to the xaml code and update the <code>Click</code> events to the new method call.</p>
+
+<div class="highlight">
+<pre>        <span class="nt">&lt;Grid</span> <span class="na">x:Name=</span><span class="s">"ButtonPanel"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Height=</span><span class="s">"103"</span> <span class="na">Grid.RowSpan=</span><span class="s">"2"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span> <span class="na">Width=</span><span class="s">"480"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">x:Name=</span><span class="s">"BlueButton"</span> <span class="na">Content=</span><span class="s">"Blue"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Margin=</span><span class="s">"10,10,0,0"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span> <span class="na">Click=</span><span class="s">"ColorButton_Click"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">x:Name=</span><span class="s">"OrangeButton"</span> <span class="na">Content=</span><span class="s">"Orange"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Margin=</span><span class="s">"110,10,0,0"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span> <span class="na">Click=</span><span class="s">"ColorButton_Click"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">x:Name=</span><span class="s">"RedButton"</span> <span class="na">Content=</span><span class="s">"Red"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Margin=</span><span class="s">"242,10,0,0"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span> <span class="na">Click=</span><span class="s">"ColorButton_Click"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">x:Name=</span><span class="s">"WhiteButton"</span> <span class="na">Content=</span><span class="s">"White"</span> <span class="na">HorizontalAlignment=</span><span class="s">"Left"</span> <span class="na">Margin=</span><span class="s">"337,10,0,0"</span> <span class="na">VerticalAlignment=</span><span class="s">"Top"</span> <span class="na">Click=</span><span class="s">"ColorButton_Click"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Grid&gt;</span>
+</pre>
+</div>
+
+
+<hr><p>Now build and see that your app has the same functionality, but by using one function, we can couple together events that have the similar expectation and outcome.</p>
+
+<p><a href="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/simulator.PNG" target="_blank"><img src="https://raw.github.com/JamieChung/Windows-8-Independent-Study/master/_resources/flashlightcolors/simulator.PNG" alt="Simulator" style="max-width:100%;"></a></p>
+      </article>
+    </div>
+  </body>
+</html>
